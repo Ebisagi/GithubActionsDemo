@@ -1,0 +1,25 @@
+name :  sampling github-Actions
+
+on:
+ push:
+  branches:
+   - main
+ pull_request:
+  branches:
+   - main
+ workflow_dispatch:
+ 
+jobs:
+  helow:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: hellow world 
+        run: echo " Hi I am giving it a try reguardless " 
+        shell: bash
+  goodbye: 
+    runs-on: ubuntu-latest
+    steps:
+      - name: goodbye world
+        run: echo "goodbye my well wishers " 
+        shell: bash
